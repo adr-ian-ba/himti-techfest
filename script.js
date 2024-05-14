@@ -40,31 +40,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //button group
     function handleSelection(choices, defaultChoiceVar) {
-        let selectedChoice = choices[0].textContent;
-        defaultChoiceVar = selectedChoice; 
+        let selectedChoice = choices[0].textContent
+        defaultChoiceVar = selectedChoice;
 
-        choices[0].classList.add('bg-gradient'); 
+        choices[0].classList.add('bg-gradient');
 
         choices.forEach(choice => {
             choice.addEventListener('click', () => {
                 choices.forEach(c => c.classList.remove('bg-gradient'));
                 
-                choice.classList.add('bg-gradient');
+                choice.classList.add('bg-gradient')
                 
-                selectedChoice = choice.textContent; 
-                console.log('Selected choice:', selectedChoice);
+                selectedChoice = choice.textContent 
+                console.log('Selected choice:', selectedChoice)
             });
         });
 
         return defaultChoiceVar;
     }
 
-    // Handle the 'choice-techtalk-binusian' group
-    const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian');
-    let selectedChoiceTechtalkBinusian = handleSelection(choicesTechtalkBinusian, 'Binusian');
+    // buat choice-techtalk-binusian
+    const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian')
+    let selectedChoiceTechtalkBinusian = handleSelection(choicesTechtalkBinusian, 'Binusian')
 
-    // Handle the 'choice-techtalk-place' group
-    const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place');
-    let selectedChoiceTechtalkPlace = handleSelection(choicesTechtalkPlace, 'Online');
+    // buat choice-techtalk-place
+    const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place')
+    let selectedChoiceTechtalkPlace = handleSelection(choicesTechtalkPlace, 'Online')
 
 });
