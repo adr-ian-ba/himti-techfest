@@ -28,9 +28,9 @@
     --font-size-l: 1.25rem;  
     --font-size-xl: 2rem;
 
-    --color-text : #FFFFFF;
-    --color-background : #252525;
-    --color-foreground : #414141;
+    --color-text : #1a1a1a;
+    --color-background : #E6E6E6;
+    --color-foreground : #c4c4c4;
 
     --gradient-vertical: linear-gradient(to bottom, #80E8DD, #7DABDF, #B27CC7, #D07EB0, #E1B698, #B7F6AF  );
     --gradient-horizontal : linear-gradient(to right, #80E8DD, #7DABDF, #B27CC7, #D07EB0, #E1B698, #B7F6AF); 
@@ -45,11 +45,18 @@ body {
     margin: 0;
 
     overflow-x: hidden !important;
+    overflow-y: hidden;
+
 }
 
 html{
     overflow-x: hidden !important;
-  
+    scroll-behavior: smooth;
+
+}
+
+ul{
+    list-style: none;
 }
 
 section{
@@ -80,6 +87,10 @@ button{
     position: absolute;
 }
 
+.planet-thingy-img-decorator{
+    top: 0;
+    left: 40%;
+}
 .planet-thingy-img-decorator-2{
     top: -300px;
     left: 0;
@@ -106,11 +117,18 @@ button{
     }
 }
 
-.jellyfish-thingy-img-decorator{
-    width: 100%;
-    top: 100px;
-    right: 0;
-    animation: bobbing 5s ease-in-out infinite;
+.triangle-thingy-img-decorator{
+    top: -5%;
+    left: -10%;
+    opacity: .5;
+}
+
+.technology-thingy-img-decorator{
+    width: 50%;
+    top: 0;
+    left: 0;
+
+    opacity: .3;
 
     img{
         width: 100%;
@@ -119,14 +137,22 @@ button{
     }
 }
 
-.jellyfish-thingy-img-decorator-2{
-    top: 300px;
-    width: 100%;
-    right: 0;
+.circle-thingy-img-decorator{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2500px;
+
+    opacity: .3;
+
     img{
+        height: auto;
         width: 100%;
-        height: 100%;
         object-fit: contain;
+    }
+
+    @media (max-width: 580px) {
+        width: 1800px;
     }
 }
 
@@ -167,7 +193,7 @@ nav{
             font-size: 1rem;
 
             li{
-                background: radial-gradient(circle at center, rgba(37, 37, 37, 1),rgba(37, 37, 37, 1), rgba(37, 37, 37, 0));
+                // background: radial-gradient(circle at center, rgba(37, 37, 37, 1),rgba(37, 37, 37, 1), rgba(37, 37, 37, 0));
                 padding: 1rem;
             }
         }
@@ -387,29 +413,37 @@ nav{
                 margin-top: var(--spacing-m);
                 margin-bottom: var(--spacing-l);
             }
-    
-            button{
-                position: relative;
-                background-color: var(--color-background);
-                color: var(--color-text);
-                
-                width: 10rem;
-                height: 3rem;
-                font-size: var(--font-size-l);
-                border-radius: 10px;
-    
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: -3px; 
-                    left: -3px; 
-                    right: -3px; 
-                    bottom: -3px; 
-                    z-index: -1;
-                    background-image: var(--gradient-horizontal);
-                    border-radius: inherit;
+
+            a{
+                width: fit-content;
+                margin-left: auto;
+
+
+                button{
+                    position: relative;
+                    background-color: var(--color-background);
+                    color: var(--color-text);
+                    
+                    width: 10rem;
+                    height: 3rem;
+                    font-size: var(--font-size-l);
+                    border-radius: 10px;
+                    border: none;
+        
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: -3px; 
+                        left: -3px; 
+                        right: -3px; 
+                        bottom: -3px; 
+                        z-index: -1;
+                        background-image: var(--gradient-horizontal);
+                        border-radius: inherit;
+                    }
                 }
             }
+    
         }
 
         @media (max-width: 1120px) {
@@ -541,7 +575,7 @@ nav{
                 width: 20px;
                 height: 20px;
                 left: -75px;
-                background-color: white;
+                background-color: var(--color-text);
                 top: 0px;
                 border-radius: 50%;
                 z-index: 1;
@@ -565,64 +599,101 @@ nav{
     }
 
     .img-wrapper{
+        position: relative;
+
         max-width: 40rem;
-        overflow: hidden;
-        border: 1px solid var(--color-text);
         border-radius: 1rem;
 
         margin: 0 auto;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -5px; 
+            left: -5px; 
+            right: -5px; 
+            bottom: -1px; 
+            z-index: -1;
+            background-image: var(--gradient-horizontal);
+            border-radius: inherit;
+        }
 
         img{
             width: 100%;
             height: 100%;
             object-fit: contain;
+            border-radius: .8rem;
         }
     }
 }
 
 footer{
-    background: linear-gradient(to bottom, var(--color-foreground), var(--color-background));
+    background: var(--gradient-horizontal);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
-    padding: 2rem;
-
-    .bottom{
+    .top{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-wrap: wrap;
 
-    }
+        .right{
+            display: flex;
+            gap: 5rem;
+            align-items: center;
 
-
-    .right{
-
-        ul{
-            list-style: none;
-
-            li{
+            ul{
                 font-size: var(--font-size-l);
-                padding: var(--spacing-s);
+                padding: 0;
             }
         }
     }
 
+
+
+    .bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+
+        .right{
+            display: flex;
+            gap: 5rem;
+            .logo{
+                max-width: 10rem;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+    }
+
+
     @media (min-width: 320px) {
         padding: 0 1.5rem;
+        padding-top: 2rem;
     }
 
     @media (min-width: 768px) {
         padding: 0 3rem;
+        padding-top: 2rem;
+
     }
 
     @media (min-width: 1024px) {
         padding: 0 10rem;
+        padding-top: 2rem;
+
     }
 
     @media (min-width: 1440px) {
         padding: 0 15rem;
+        padding-top: 2rem;
+
     }
 }
 

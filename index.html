@@ -25,8 +25,12 @@
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="close">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>  
-                </li>                
-                <li>Techfest</li>
+                </li> 
+                <a href="./pages/techtalk/index.html">
+                    <li>
+                        TechTalk
+                    </li>
+                </a>               
                 <li>Competition</li>
                 <li>TechExpo</li>
                 <li>Showcase</li>
@@ -45,8 +49,9 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores a tempora odio quibusdam. Quam facilis, harum totam debitis dolore illo necessitatibus rem quidem excepturi in.</p>
         
             <div class="cta-group">
-                <button class="cta-explore">Explore</button>
-                <button class="cta-register">Register</button>
+                <a href="#timer">
+                    <button class="cta-register">Explore</button>
+                </a>
             </div>
         
         </div>
@@ -60,19 +65,21 @@
 
         <div class="location">
 
-            <div class="timer">
+            <div class="timer" id="timer">
                 <h1 class="time">Time & Place</h1>
                 <h1 class="time count-down">00 : 00 : 00 : 00</h1>
                 <p class="time">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo veniam sequi veritatis deleniti, aliquid voluptatibus suscipit, nisi ducimus neque possimus porro ad voluptates aut.</p>
-                <button class="time">Google Maps</button>
+                <a href="https://www.google.com/maps/dir//Jl.+Raya+Kb.+Jeruk+No.27,+RT.1%2FRW.9,+Kemanggisan,+Kec.+Palmerah,+Kota+Jakarta+Barat,+Daerah+Khusus+Ibukota+Jakarta+11530/@-6.2017521,106.6998528,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f6dcc7d2c4ad:0x209cb1eef39be168!2m2!1d106.7822547!2d-6.2017585?entry=ttu" target="_blank">
+                    <button class="time">Google Maps</button>
+                </a>
             </div>
         </div>
 
     </section>
     
-    <section class="techtalk">
-        <div class="decorator jellyfish-thingy-img-decorator">
-            <img src="./assets/image/thingy/Jellyfish Thingy.png" alt="">
+    <section class="techtalk" >
+        <div class="decorator technology-thingy-img-decorator">
+            <img src="./assets/image/thingy/Technology Thingy.png" alt="">
         </div>
         <div class="description">
             <p class="modern">TECHTALK</p>
@@ -93,8 +100,8 @@
     </section>
 
     <section class="timeline">
-        <div class="decorator jellyfish-thingy-img-decorator-2">
-            <img src="./assets/image/thingy/Jellyfish Thingy.png" alt="">
+        <div class="decorator circle-thingy-img-decorator">
+            <img src="./assets/image/thingy/Circle Thingy.png" alt="">
         </div>
         <h1>TIMELINE</h1>
 
@@ -156,31 +163,45 @@
     </section>
 
     <footer>
+
+      <div class="top">
         <div class="left">
-            <div class="top">
-                <div class="img-wrapper">
-                    <img src="./assets/image/TechFest Logo.png" alt="">
-                </div>
-            </div>
-
-            <div class="bottom">
-                <div class="img-wrapper">
-                    <img src="./assets/image/TechFest Logo.png" alt="">
-                </div>
-                <div class="img-wrapper">
-                    <img src="./assets/image/TechFest Logo.png" alt="">
-                </div>
-
-            </div>
+            <img src="./assets/image/TechFest Logo.png" alt="">
         </div>
 
         <div class="right">
-            <ul>
-                <li>About</li>
-                <li>FAQ</li>
-                <li>Contact</li>
-            </ul>
+            <div class="quick-link">
+                <ul>
+                    <li>TechTalk</li>
+                    <li>Competition</li>
+                    <li>Showcase</li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul>
+                    <li>About</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
         </div>
+      </div>  
+
+      <div class="bottom">
+        <div class="left">
+            <p>© 2024 TECHFEST - HIMTI BINUS</p>
+        </div>
+
+        <div class="right">
+            <div class="logo">
+                <img src="./assets/image/Binus Logo.png" alt="">
+            </div>
+
+            <div class="logo">
+                <img src="./assets/image/Himti Logo.png" alt="">
+            </div>
+        </div>
+      </div>
     </footer>
 
     <script src="./script.js"></script>
