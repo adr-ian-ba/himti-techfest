@@ -42,6 +42,21 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>          
     </nav>
+    
+    <div class="dialog" id="techtalk-required-dialog">
+        <div class="dialog-content">
+            <h3>Please fill all required question</h3>
+            <div class="back" id="techtalk-required-back">Back</div>
+        </div>
+    </div>
+
+    <div class="dialog" id="techtalk-submit-dialog">
+        <div class="dialog-content">
+            <h3>Make sure to double check</h3>
+            <div class="back" id="techtalk-submit-back">Back</div>
+            <div class="back submit" id="techtalk-submit-submit">Submit</div>
+        </div>
+    </div>
 
     <section class="register">
         <h1>register techtalk</h1>
@@ -55,43 +70,49 @@
             <div class="question">
                 <h3>Nama Lengkap</h3>
                 <p>Silahkan Masukkan Nama Lengkap Anda</p>
-                <input type="text">
+                <input type="text" id="nama-techtalk">
             </div>
 
             <div class="question">
                 <h3>Nomor Induk Mahasiswa (NIM)</h3>
                 <p>Silahkan Masukkan NIM Anda</p>
-                <input type="text">
+                <input type="text" id="nim-techtalk">
             </div>
 
             <div class="question">
                 <h3>Email</h3>
                 <p>Silahkan Masukkan Email Anda</p>
-                <input type="text">
+                <input type="text" id="email-techtalk">
             </div>
 
             <div class="question">
                 <h3>ID LINE</h3>
                 <p>Silahkan Masukkan ID LINE Anda</p>
-                <input type="text">
+                <input type="text" id="line-techtalk">
             </div>
 
             <div class="question">
                 <h3>Instansi</h3>
                 <p>Silahkan Masukkan Universitas asal Anda</p>
-                <input type="text">
+                <input type="text" id="instansi-techtalk">
             </div>
 
             <div class="question">
                 <h3>Jurusan</h3>
                 <p>Silahkan Masukkan Jurusan Anda</p>
-                <input type="text">
+                <input type="text" id="jurusan-techtalk">
             </div>
 
             <div class="question">
                 <h3>Region Binus</h3>
                 <p>Silahkan Masukkan darimana region Binus Anda</p>
-                <input type="text">
+                <select id="region-techtalk">
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Semarang">Semarang</option>
+                    <option value="Malang">Malang</option>
+                    <option value="Surabaya">Surabaya</option>
+                </select>
             </div>
 
             <h3>Ketersediaan hadir</h3>
@@ -105,7 +126,7 @@
             
             <br>
 
-            <button class="submit">Submit</button>
+            <button type="button" id="techtalk-submit" class="submit">Submit</button>
         </form>
     </section>
 
