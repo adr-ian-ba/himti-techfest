@@ -1,14 +1,14 @@
 @font-face {
   font-family: Atmospheric;
-  src: url(./assets/font/aAtmospheric.ttf);
+  src: url(../../assets/font/aAtmospheric.ttf);
 }
 @font-face {
   font-family: Hiragino w3;
-  src: url(./assets/font/Hiragino\ Kaku\ Gothic\ Pro\ W3.otf);
+  src: url(../../assets/font/Hiragino\ Kaku\ Gothic\ Pro\ W3.otf);
 }
 @font-face {
   font-family: Hiragino w6;
-  src: url(./assets/font/Hiragino\ Kaku\ Gothic\ Pro\ W6.otf);
+  src: url(../../assets/font/Hiragino\ Kaku\ Gothic\ Pro\ W6.otf);
 }
 :root {
   --spacing-s: 0.5rem;
@@ -23,10 +23,26 @@
   --font-size-l: 1.25rem;
   --font-size-xl: 2rem;
   --color-text: #1a1a1a;
-  --color-background: #E6E6E6;
+  --color-background: #e6e6e6;
   --color-foreground: #c4c4c4;
-  --gradient-vertical: linear-gradient(to bottom, #80E8DD, #7DABDF, #B27CC7, #D07EB0, #E1B698, #B7F6AF );
-  --gradient-horizontal: linear-gradient(to right, #80E8DD, #7DABDF, #B27CC7, #D07EB0, #E1B698, #B7F6AF);
+  --gradient-vertical: linear-gradient(
+    to bottom,
+    #80e8dd,
+    #7dabdf,
+    #b27cc7,
+    #d07eb0,
+    #e1b698,
+    #b7f6af
+  );
+  --gradient-horizontal: linear-gradient(
+    to right,
+    #80e8dd,
+    #7dabdf,
+    #b27cc7,
+    #d07eb0,
+    #e1b698,
+    #b7f6af
+  );
 }
 
 body {
@@ -47,11 +63,6 @@ html {
 
 ul {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-text);
 }
 
 section {
@@ -85,11 +96,6 @@ button {
 .decorator {
   z-index: -1;
   position: absolute;
-}
-
-.planet-thingy-img-decorator-competition {
-  bottom: -200px;
-  left: 40%;
 }
 
 .planet-thingy-img-decorator {
@@ -148,7 +154,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .technology-thingy-img-decorator {
@@ -161,7 +167,7 @@ button {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .circle-thingy-img-decorator {
@@ -175,7 +181,7 @@ button {
   height: auto;
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (max-width: 580px) {
   .circle-thingy-img-decorator {
@@ -201,7 +207,7 @@ nav .logo-wrapper img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 nav .item-wrapper {
   transition: all 300ms linear;
@@ -218,7 +224,8 @@ nav .item-wrapper ul {
 nav .item-wrapper ul li {
   padding: 1rem;
 }
-nav .hamburger, nav .close {
+nav .hamburger,
+nav .close {
   padding: var(--spacing-s);
   height: 2rem;
   width: 2rem;
@@ -249,7 +256,8 @@ nav .close {
   }
 }
 @media (max-width: 1130px) {
-  nav .hamburger, nav .close {
+  nav .hamburger,
+  nav .close {
     display: block;
   }
   nav .item-wrapper {
@@ -288,19 +296,30 @@ nav .close {
     margin-top: var(--spacing-l);
   }
 }
-
+/* hero */
 .hero-section {
+  margin: 0;
+  padding: 0;
   margin-top: 5rem;
   margin-bottom: var(--spacing-xxxl);
-}
-.hero-section .hero-text {
   position: relative;
+}
+.hero-text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  /* position: relative; */
   font-family: "Atmospheric", sans-serif;
 }
-.hero-section .hero-text h1 {
+.hero-text h3 {
   margin: 0;
+  font-weight: 500;
   margin-bottom: var(--spacing-xl);
   font-size: 5rem;
+  max-width: 55%;
 }
 @media (max-width: 690px) {
   .hero-section .hero-text h1 {
@@ -312,12 +331,7 @@ nav .close {
     font-size: 3rem;
   }
 }
-.hero-section .hero-text p {
-  font-family: "Hiragino w3", sans-serif;
-  max-width: 50rem;
-  position: relative;
-  margin-bottom: var(--spacing-xl);
-}
+
 .hero-section .hero-text .cta-group {
   display: flex;
   gap: var(--spacing-m);
@@ -351,7 +365,52 @@ nav .close {
   background-image: var(--gradient-horizontal);
   border-radius: inherit;
 }
-
+/* hero */
+/*mascot*/
+.mascot-section {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(assets/Planet.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.icon-stage {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img__wrapper {
+  height: 10%;
+  width: 10%;
+  position: relative;
+}
+.img__wrapper img:nth-child(1) {
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.img__wrapper img:nth-child(2) {
+  top: 25%;
+  left: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+/* mascot */
 .about-section .location {
   display: flex;
   gap: var(--spacing-xl);
@@ -367,7 +426,7 @@ nav .close {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .about-section .location .timer {
   width: 100%;
@@ -475,24 +534,38 @@ nav .close {
   color: var(--color-text);
   background-color: transparent;
 }
-
-.techtalk, .competition {
-  display: flex;
-  flex-direction: column;
-}
-
+/* techtalk */
 .techtalk {
-  margin-bottom: var(--spacing-xxl);
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.competition {
-  align-items: end;
-  text-align: end;
-  margin-bottom: var(--spacing-xxxl);
+.techtalk .techtalk__description {
+  text-align: center;
 }
-
+.techtalk__description h3 {
+  font-family: "Atmospheric", sans-serif;
+  font-size: var(--font-size-l);
+}
+.techtalk__description h1 {
+  font-family: "Atmospheric", sans-serif;
+  font-size: 5rem;
+  /* line-height: 2.5rem; */
+  margin: 0;
+}
+/* techtalk */
+/* time line === card soal nya gweh males ganti class nya hehe */
 .timeline {
   margin-bottom: var(--spacing-xxxl);
+  height: 250vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .timeline h1 {
   font-family: "Atmospheric", sans-serif;
@@ -507,7 +580,18 @@ nav .close {
     font-size: 3rem;
   }
 }
-.timeline .timeline-container {
+.card__container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* time line === card soal nya gweh males ganti class nya hehe */
+/* ini diapus aja bekas dari index htmls */
+/* .timeline .timeline-container {
   position: relative;
   margin: 0 auto;
   width: -moz-fit-content;
@@ -550,7 +634,7 @@ nav .close {
   top: 0px;
   border-radius: 50%;
   z-index: 1;
-}
+} */
 
 .partner {
   margin-bottom: var(--spacing-xxxl);
@@ -588,7 +672,7 @@ nav .close {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 0.8rem;
 }
 
@@ -627,7 +711,7 @@ footer .bottom .right .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 @media (min-width: 320px) {
   footer {
@@ -655,7 +739,8 @@ footer .bottom .right .logo img {
 }
 
 @keyframes bobbing {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -715,7 +800,7 @@ footer .bottom .right .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .description-techtalk .description {
   margin: var(--spacing-xxl) auto;
@@ -767,64 +852,11 @@ footer .bottom .right .logo img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .bg-gradient {
   background-image: var(--gradient-horizontal);
-}
-
-.display-none {
-  display: none;
-}
-
-.display-block {
-  display: block !important;
-}
-
-.dialog {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-.dialog .dialog-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem;
-  border-radius: 5px;
-}
-.dialog .dialog-content h3 {
-  margin: 0;
-}
-.dialog .dialog-content .back {
-  padding: 0.5rem 1rem;
-  border: 2px solid var(--color-text);
-  margin: 1rem;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 100ms linear;
-}
-.dialog .dialog-content .back:hover {
-  background-color: var(--color-text);
-  color: var(--color-background);
-}
-.dialog .dialog-content .submit {
-  border-color: #7DABDF;
-  color: #7DABDF;
-}
-.dialog .dialog-content .submit:hover {
-  background-color: #7DABDF;
-  color: var(--color-background);
 }
 
 .register h1 {
@@ -857,25 +889,17 @@ footer .bottom .right .logo img {
 .register form .question {
   margin-bottom: var(--spacing-l);
 }
-.register form .question .short {
-  max-width: 20rem;
-}
-.register form .question-group {
-  display: flex;
-  gap: 2rem;
-}
-.register form .question-group input {
-  margin-bottom: 0.5rem;
-}
-.register form h3, .register form p {
+.register form h3,
+.register form p {
   margin: 0;
 }
-.register form input, .register form select {
+.register form input {
   width: 100%;
+  height: 1rem;
   box-sizing: border-box;
   border: 2px solid var(--color-text);
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1rem;
 }
 .register form .button-group {
@@ -884,11 +908,6 @@ footer .bottom .right .logo img {
   gap: 1rem;
   padding: 2rem 0;
   font-weight: bold;
-}
-.register form .button-group-competition {
-  position: absolute;
-  top: 1000%;
-  left: 1000%;
 }
 .register form .choice {
   padding: 0.5rem;
@@ -909,44 +928,49 @@ footer .bottom .right .logo img {
   border: none;
   margin: 3rem auto;
   font-weight: bold;
+} /*# sourceMappingURL=style.css.map */
+@media (max-width: 1124px) {
+  .hero-section {
+    width: 100%;
+    height: 50vh;
+  }
+  .hero-text {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-text h3 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .mascot-section {
+    height: 50vh;
+  }
+  .techtalk__description {
+    width: 100%;
+  }
+  .techtalk__description h3 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .techtalk__description h1 {
+    font-size: 2rem;
+  }
 }
-
-.description-competition .img-wrapper {
-  margin: 5rem auto;
-  width: 15rem;
-  height: 15rem;
+@media (max-width: 800px) {
+  .hero-text h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .timeline {
+    height: 450vh;
+  }
+  .card__container {
+    justify-content: center;
+    gap: 64px;
+    width: 100%;
+  }
+  .card {
+  }
 }
-.description-competition .img-wrapper img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.description-competition .description {
-  margin: var(--spacing-xxl) auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 50rem;
-  align-items: center;
-  gap: var(--spacing-xxl);
-}
-.description-competition .description .content {
-  width: 20rem;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-.description-competition .description .content-img {
-  width: 20rem;
-  height: 20rem;
-  margin: 0 auto;
-}
-.description-competition .description .content-img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.description-competition .computer-wrapper {
-  flex-wrap: wrap-reverse;
-}/*# sourceMappingURL=style.css.map */

@@ -45,6 +45,21 @@
         </svg>          
     </nav>
 
+    <div class="dialog" id="techtalk-required-dialog">
+        <div class="dialog-content">
+            <h3>Please fill all required question</h3>
+            <div class="back" id="techtalk-required-back">Back</div>
+        </div>
+    </div>
+
+    <div class="dialog" id="techtalk-submit-dialog">
+        <div class="dialog-content">
+            <h3>Make sure to double check</h3>
+            <div class="back" id="techtalk-submit-back">Back</div>
+            <div class="back submit" id="competition-submit-submit">Submit</div>
+        </div>
+    </div>
+
     <section class="register">
         <h1>register competition</h1>
 
@@ -57,93 +72,83 @@
             <div class="question">
                 <h3>Nama Tim</h3>
                 <p>Tidak mengandung unsur politik, SARA, pornografi, dan tidak bertentangan dengan norma yang berlaku.</p>
-                <input type="text">
+                <input type="text" id="nama-tim-competition">
             </div>
 
             <div class="question-group">
                 <div class="question">
                     <h3>Nama Lengkap</h3>
                     <p>Semua Naggota tim</p>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" id="nama1-competition">
+                    <input type="text" id="nama2-competition">
+                    <input type="text" id="nama3-competition">
                 </div>
 
                 <div class="question">
                     <h3>NIM / NIP</h3>
                     <p>Semua Naggota tim</p>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" id="nim1-competition">
+                    <input type="text" id="nim2-competition">
+                    <input type="text" id="nim3-competition">
+                </div>
+
+                <div class="question">
+                    <h3>semester</h3>
+                    <p>Semua Naggota tim</p>
+                    <input type="text" id="semester1-competition">
+                    <input type="text" id="semester2-competition">
+                    <input type="text" id="semester3-competition">
                 </div>
             </div>
 
             <div class="question">
                 <h3>Asal institusi</h3>
-                <input type="text">
+                <input type="text" id="institusi-competition">
             </div>
 
-            <div class="question-group">
 
-                <div class="question">
-                    <h3>semester</h3>
-                    <p>Semua Naggota tim</p>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                </div>
-
-                <div class="question">
-                    <h3>Foto kartu institusi</h3>
-                    <p>Semua Naggota tim</p>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                </div>
+            <div class="question">
+                <h3>Foto kartu institusi</h3>
+                <p>Semua Naggota tim</p>
+                <input type="text" id="kartu-competition">
             </div>
 
             <div class="question">
                 <h3>ID LINE</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text">
+                <input type="text" id="line-competition">
             </div>
 
             <div class="question">
                 <h3>Email</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text">
+                <input type="text" id="email-competition">
             </div>
 
             <div class="question">
                 <h3>Nomor HP</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text">
+                <input type="text" id="no-competition">
             </div>
 
             <div class="question">
                 <h3>Bukti Upload Twibbon dan Poster</h3>
                 <p>File yang berisi semua bukti upload dari peserta</p>
-                <input class="short" type="text">
+                <input class="short" type="text" id="twibbon-competition">
             </div>
 
             <div class="question">
                 <h3>Bukti pembayaran</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input class="short" type="text">
+                <input class="short" type="text" id="bayar-competition">
             </div>
 
-            <h3>Ketersediaan hadir</h3>
-            <p>Silahkan ceklist ketersediaan hadir anda</p>
-            <p>Notes : Binusian Kemanggisan dan alam sutra wajib hadir onsite</p>
-        
-            <div class="button-group">
+            <div class="button-group button-group-competition">
                 <div class="choice choice-techtalk-place">Online</div>
                 <div class="choice choice-techtalk-place">Onsite</div>
             </div>
-            
-            <br>
 
-            <button class="submit">Submit</button>
+            <button type="button" id="competittion-submit" class="submit">Submit</button>
         </form>
     </section>
 
