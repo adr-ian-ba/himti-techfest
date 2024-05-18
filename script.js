@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 if (choices[0].classList.contains('choice-techtalk-binusian')) {
                     selectedChoiceTechtalkBinusian = choice.textContent
-                    console.log('Selected choice for Techtalk Binusian:', selectedChoiceTechtalkBinusian);
+                    //console.log('Selected choice for Techtalk Binusian:', selectedChoiceTechtalkBinusian);
                 } else if (choices[0].classList.contains('choice-techtalk-place')) {
                     selectedChoiceTechtalkPlace = choice.textContent
-                    console.log('Selected choice for Techtalk Place:', selectedChoiceTechtalkPlace)
+                    //console.log('Selected choice for Techtalk Place:', selectedChoiceTechtalkPlace)
                 }
             });
         });
