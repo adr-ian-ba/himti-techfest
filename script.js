@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (element) {
             return element.value;
         } else {
-            return null
+            return null;
         }
     }
 
@@ -127,13 +127,13 @@ document.addEventListener("DOMContentLoaded", function() {
     try{
 
         techtalkSubmitSubmit.addEventListener("click", function() {
-            let techtalkNama = getValueById("nama-techtalk")
-            let techtalkNim = getValueById("nim-techtalk")
-            let techtalkEmail = getValueById("email-techtalk")
-            let techtalkLine = getValueById("line-techtalk")
-            let techtalkInstansi = getValueById("instansi-techtalk")
-            let techtalkJurusan = getValueById("jurusan-techtalk")
-            let techtalkRegion = getValueById("region-techtalk")
+            let techtalkNama = getValueById("nama-techtalk");
+            let techtalkNim = getValueById("nim-techtalk");
+            let techtalkEmail = getValueById("email-techtalk");
+            let techtalkLine = getValueById("line-techtalk");
+            let techtalkInstansi = getValueById("instansi-techtalk");
+            let techtalkJurusan = getValueById("jurusan-techtalk");
+            let techtalkRegion = getValueById("region-techtalk");
         
             // console.log("Nama:", techtalkNama);
             // console.log("NIM:", techtalkNim);
