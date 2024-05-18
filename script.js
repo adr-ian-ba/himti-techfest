@@ -42,38 +42,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const interval = setInterval(countdown, 1000)
 
-    //button group
-    function handleSelection(choices, defaultChoiceVar) {
-        let selectedChoice = choices[0].textContent
-        defaultChoiceVar = selectedChoice;
+    let selectedChoiceTechtalkBinusian
+    let selectedChoiceTechtalkPlace
 
-        choices[0].classList.add('bg-gradient');
+    function handleSelection(choices, defaultChoice) {
+        choices.forEach(choice => {
+            if (choice.textContent === defaultChoice) {
+                choice.classList.add('bg-gradient')
+            }
+        });
 
         choices.forEach(choice => {
             choice.addEventListener('click', () => {
-                choices.forEach(c => c.classList.remove('bg-gradient'));
-                
+
+                choices.forEach(c => c.classList.remove('bg-gradient'))
+
                 choice.classList.add('bg-gradient')
-                
-                selectedChoice = choice.textContent 
-                console.log('Selected choice:', selectedChoice)
+
+                if (choices[0].classList.contains('choice-techtalk-binusian')) {
+                    selectedChoiceTechtalkBinusian = choice.textContent
+                    console.log('Selected choice for Techtalk Binusian:', selectedChoiceTechtalkBinusian);
+                } else if (choices[0].classList.contains('choice-techtalk-place')) {
+                    selectedChoiceTechtalkPlace = choice.textContent
+                    console.log('Selected choice for Techtalk Place:', selectedChoiceTechtalkPlace)
+                }
             });
         });
 
-        return defaultChoiceVar;
+        if (choices[0].classList.contains('choice-techtalk-binusian')) {
+            selectedChoiceTechtalkBinusian = defaultChoice
+        } else if (choices[0].classList.contains('choice-techtalk-place')) {
+            selectedChoiceTechtalkPlace = defaultChoice
+        }
     }
 
-    //form techtalk
-    // buat choice-techtalk-binusian
-
+    // Form techtalk & compe
+    // Create choice-techtalk-binusian
     const choicesTechtalkBinusian = document.querySelectorAll('.choice-techtalk-binusian')
-    let selectedChoiceTechtalkBinusian = handleSelection(choicesTechtalkBinusian, 'Binusian')
+    handleSelection(choicesTechtalkBinusian, choicesTechtalkBinusian[0].textContent)
 
-
-    // buat choice-techtalk-place
-
+    // Create choice-techtalk-place
     const choicesTechtalkPlace = document.querySelectorAll('.choice-techtalk-place')
-    let selectedChoiceTechtalkPlace = handleSelection(choicesTechtalkPlace, 'Online')
+    handleSelection(choicesTechtalkPlace, choicesTechtalkPlace[0].textContent)
+
 
     function getValueById(elementId) {
         var element = document.getElementById(elementId);
@@ -251,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // console.log("Phone Number:", competititonNo);
             // console.log("Twibbon Link:", competitionTwibbon);
             // console.log("Payment Proof:", competitionBayar);
+            // console.log("tipe lomba : ", selectedChoiceTechtalkBinusian)
         
         
             const competitionForm = new GoogleFormSubmitter("https://docs.google.com/forms/u/0/d/e/1FAIpQLSdz8-tOf-hTw1GP9sjemFrz7-3Qt5TuRHIUeowo9ezyVaGdbQ/formResponse")
