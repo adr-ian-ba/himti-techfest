@@ -33,11 +33,13 @@
                         TechTalk
                     </li>
                 </a>      
-                <a href="../competititon/index.html">
+                <a href="../competititon/index.html" class="navbar-active">
                     <li>Competition</li>
                 </a>         
                 <a href="../techexpo/index.html"><li>TechExpo</li></a>
-                <li>Showcase</li>
+
+                <a href="../TechShowcase/index.html"><li>Showcase</li></a>
+                
             </ul>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hamburger">
@@ -72,38 +74,38 @@
             <div class="question">
                 <h3>Nama Tim</h3>
                 <p>Tidak mengandung unsur politik, SARA, pornografi, dan tidak bertentangan dengan norma yang berlaku.</p>
-                <input type="text" id="nama-tim-competition">
+                <input type="text" id="nama-tim-competition" placeholder="Nama Tim">
             </div>
 
             <div class="question-group">
                 <div class="question">
                     <h3>Nama Lengkap</h3>
                     <p>Semua Anggota Tim</p>
-                    <input type="text" id="nama1-competition">
-                    <input type="text" id="nama2-competition">
-                    <input type="text" id="nama3-competition">
+                    <input type="text" id="nama1-competition" placeholder="Nama Anggota 1">
+                    <input type="text" id="nama2-competition" placeholder="Nama Anggota 2">
+                    <input type="text" id="nama3-competition" placeholder="Nama Anggota 3">
                 </div>
 
                 <div class="question">
                     <h3>NIM / NIP</h3>
                     <p>Semua Anggota Tim</p>
-                    <input type="text" id="nim1-competition">
-                    <input type="text" id="nim2-competition">
-                    <input type="text" id="nim3-competition">
+                    <input type="text" id="nim1-competition" placeholder="NIM/NIP Anggota 1">
+                    <input type="text" id="nim2-competition" placeholder="NIM/NIP Anggota 2">
+                    <input type="text" id="nim3-competition" placeholder="NIM/NIP Anggota 3">
                 </div>
 
                 <div class="question">
                     <h3>Semester</h3>
                     <p>Semua Anggota Tim</p>
-                    <input type="text" id="semester1-competition">
-                    <input type="text" id="semester2-competition">
-                    <input type="text" id="semester3-competition">
+                    <input type="text" id="semester1-competition" placeholder="Semester Anggota 1">
+                    <input type="text" id="semester2-competition" placeholder="Semester Anggota 2">
+                    <input type="text" id="semester3-competition" placeholder="Semester Anggota 3">
                 </div>
             </div>
 
             <div class="question">
                 <h3>Asal Institusi</h3>
-                <input type="text" id="institusi-competition">
+                <input type="text" id="institusi-competition" placeholder="Institusi">
             </div>
 
 
@@ -111,25 +113,25 @@
                 <h3>Foto Kartu Institusi</h3>
                 <p>Semua Anggota tim <br>
                     (File diupload ke Google Drive terlebih dahulu) </p>
-                <input type="text" id="kartu-competition" placeholder="Masukkan link Google Drive disini...">
+                <input type="text" id="kartu-competition" placeholder="Masukkan link Google Drive disini">
             </div>
 
             <div class="question">
                 <h3>ID LINE</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text" id="line-competition">
+                <input type="text" id="line-competition" placeholder="ID Line">
             </div>
 
             <div class="question">
                 <h3>Email</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text" id="email-competition">
+                <input type="text" id="email-competition" placeholder="Email">
             </div>
 
             <div class="question">
                 <h3>Nomor HP</h3>
                 <p>Ketua kelompok saja bila berkelompok</p>
-                <input type="text" id="no-competition">
+                <input type="text" id="no-competition" placeholder="No HP">
             </div>
 
             <div class="question">
@@ -137,20 +139,22 @@
                 <p>File yang berisi semua bukti upload dari peserta <br>
                     (File diupload ke Google Drive terlebih dahulu)
                 </p>
-                <input class="short" type="text" id="twibbon-competition" placeholder="Masukkan link Google Drive disini...">
+                <input class="short" type="text" id="twibbon-competition" placeholder="Masukkan link Google Drive disini">
             </div>
 
             <div class="question">
                 <h3>Bukti Pembayaran</h3>
                 <p>Ketua kelompok saja bila berkelompok <br>
                     (File diupload ke Google Drive terlebih dahulu)</p>
-                <input class="short" type="text" id="bayar-competition" placeholder="Masukkan link Google Drive disini...">
+                <input class="short" type="text" id="bayar-competition" placeholder="Masukkan link Google Drive disini">
             </div>
 
             <div class="button-group button-group-competition">
                 <div class="choice choice-techtalk-place">Online</div>
                 <div class="choice choice-techtalk-place">Onsite</div>
             </div>
+
+            <p><em>Notes : Gunakan tanda "-" apabila data anggota yang diisi kurang dari 3</em></p>
 
             <button type="button" id="competittion-submit" class="submit">Submit</button>
         </form>
@@ -169,15 +173,25 @@
                 <ul>
                     <a href="../techtalk/index.html"><li>TechTalk</li></a>
               <a href="../competititon/index.html"><li>Competition</li></a>
-              <a href="../TechShowcase/showCase.html"><li>Showcase</li></a>
+              <a href="../TechShowcase/index.html"><li>Showcase</li></a>
                 </ul>
             </div>
             <div class="info">
                 <ul>
-                    <li>About</li>
-                    <li>FAQ</li>
-                    <li>Contact</li>
+                    <a href="../about/about.html"><li>About</li></a>
+                    <a href="../faq/index.html"><li>FAQ</li></a>
                 </ul>
+            </div>
+            <div class="contact">
+                <a href="">
+                    <img src="../../assets/image/social/gmail.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../../assets/image/social/line.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../../assets/image/social/instagram.png" alt="">
+                </a>
             </div>
         </div>
       </div>  
